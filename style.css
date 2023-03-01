@@ -1,0 +1,177 @@
+/* Gallery animation */
+
+/* Global styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  /* Header styles */
+  
+  header {
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  nav a:hover {
+    color: #0070c0;
+  }
+  
+  /* Main content styles */
+  
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  .intro {
+    text-align: center;
+  }
+  
+  .intro h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .intro p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  
+  .gallery img {
+    width: 100px;
+    height: 300px;
+    border-radius: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .details {
+    margin-top: 40px;
+  }
+  
+  .details h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .details ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .details li {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .reviews {
+    margin-top: 40px;
+  }
+  
+  .reviews h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .review-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .review-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .review-details h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .review-details p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Responsive styles */
+  
+  @media screen and (max-width: 600px) {
+    main {
+      padding: 20px;
+    }
+  
+    .gallery img {
+      width: 100%;
+    }
+  }
+  
+  
+
+.gallery img {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Reviews animation */
+  
+  .review-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  .review-card:hover img {
+    animation: none;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
